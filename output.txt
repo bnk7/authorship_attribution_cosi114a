@@ -1,0 +1,65 @@
+Here is the result of running the script. Random forest is not deterministic, so numbers vary slightly.
+
+Top 10 authors by number of quotes:
+Lailah Gifty Akita     10620
+Debasish Mridha         6601
+Sunday Adelaja          5891
+Matshona Dhliwayo       2259
+Israelmore Ayivor       2079
+Billy Graham            1953
+Mehmet Murat ildan      1927
+Deyth Banger            1249
+William Shakespeare     1248
+Bryant McGill           1170
+Name: author, dtype: int64
+
+Accuracy on dev set with default hyperparameters:
+Logistic regression
+Bag of words: 0.7751428571428571
+Bag of bigrams: 0.7525714285714286
+Tf-idf: 0.8094285714285714
+Bag of bigrams + McGill word list: 0.7542857142857143
+Tf-idf + McGill word list: 0.8048571428571428
+Random forest
+Bag of words: 0.7265714285714285
+Bag of bigrams: 0.5808571428571428
+Tf-idf: 0.7391428571428571
+Bag of bigrams + McGill word list: 0.6062857142857143
+Tf-idf + McGill word list: 0.7297142857142858
+
+Accuracy on dev set, tuning hyperparameters:
+Logistic regression
+Bag of words, C=0.5: 0.7708571428571429
+Bag of words, C=2.0: 0.7777142857142857
+Tf-idf, C=0.5: 0.8034285714285714
+Tf-idf, C=2.0: 0.8125714285714286
+Tf-idf + McGill word list, C=0.5: 0.8
+Tf-idf + McGill word list, C=2.0: 0.8031428571428572
+Random forest
+Tf-idf, n_estimators=50, max_features=sqrt: 0.7271428571428571
+Tf-idf, n_estimators=200, max_features=sqrt: 0.738
+Tf-idf, n_estimators=50, max_features=1.0: 0.6754285714285714
+Tf-idf, n_estimators=100, max_features=1.0: 0.6697142857142857
+
+Accuracy on test set, logistic regression only:
+Tf-idf, C=1.0: 0.8148571428571428
+Tf-idf, C=2.0: 0.818
+Tf-idf + McGill word list, C=1.0: 0.8097142857142857
+
+Classification report for logistic regression, tf-idf, C=2.0:
+                     precision    recall  f1-score   support
+
+       Billy Graham       0.82      0.74      0.78       192
+      Bryant McGill       0.56      0.32      0.40       111
+    Debasish Mridha       0.80      0.87      0.83       645
+       Deyth Banger       0.87      0.83      0.85       126
+  Israelmore Ayivor       0.73      0.72      0.73       213
+ Lailah Gifty Akita       0.89      0.84      0.87      1102
+  Matshona Dhliwayo       0.73      0.66      0.69       202
+ Mehmet Murat ildan       0.82      0.92      0.87       199
+     Sunday Adelaja       0.79      0.91      0.85       580
+William Shakespeare       0.84      0.69      0.76       130
+
+           accuracy                           0.82      3500
+          macro avg       0.79      0.75      0.76      3500
+       weighted avg       0.82      0.82      0.81      3500
