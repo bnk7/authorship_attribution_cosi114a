@@ -141,22 +141,22 @@ best. More details on this model's performance are in Table 7.
 
 **Table 7: Classification report for logistic regression with tf-idf features and C=2.0**
 
-| Author              | Precision | Recall | F1-score | Support |
-|---------------------|-----------|--------|----------|---------|
-| Billy Graham        | 0.82      | 0.74   | 0.78     | 192     |
-| Bryant McGill       | 0.56      | 0.32   | 0.40     | 111     |
-| Debasish Mridha     | 0.80      | 0.87   | 0.83     | 645     |
-| Deyth Banger        | 0.87      | 0.83   | 0.85     | 126     |
-| Israelmore Ayivor   | 0.73      | 0.72   | 0.73     | 213     |
-| Lailah Gifty Akita  | 0.89      | 0.84   | 0.87     | 1102    |
-| Matshona Dhliwayo   | 0.73      | 0.66   | 0.69     | 202     |
-| Mehmet Murat ildan  | 0.82      | 0.92   | 0.87     | 199     |
-| Sunday Adelaja      | 0.79      | 0.91   | 0.85     | 580     |
-| William Shakespeare | 0.84      | 0.69   | 0.76     | 130     |
-|                     |           |        |          |         |
-| accuracy            |           |        | 0.82     | 3500    |
-| macro avg           | 0.79      | 0.75   | 0.76     | 3500    |
-| weighted avg        | 0.82      | 0.82   | 0.81     | 3500    |
+| Author              | Precision | Recall    | F1-score  | Support |
+|---------------------|-----------|-----------|-----------|---------|
+| Billy Graham        | 82.08     | 74.00     | 77.81     | 192     |
+| Bryant McGill       | 56.45     | 31.53     | 40.46     | 111     |
+| Debasish Mridha     | 79.52     | 87.29     | 83.22     | 645     |
+| Deyth Banger        | 86.78     | 83.33     | 85.02     | 126     |
+| Israelmore Ayivor   | 73.33     | 72.30     | 72.81     | 213     |
+| Lailah Gifty Akita  | **89.05** | 84.12     | 86.51     | 1102    |
+| Matshona Dhliwayo   | 72.83     | 66.34     | 69.43     | 202     |
+| Mehmet Murat ildan  | 82.06     | **91.96** | **86.73** | 199     |
+| Sunday Adelaja      | 78.99     | 91.38     | 84.73     | 580     |
+| William Shakespeare | 84.11     | 69.23     | 75.95     | 130     |
+|                     |           |           |           |         |
+| accuracy            |           |           | 81.80     | 3500    |
+| macro avg           | 78.52     | 75.11     | 76.27     | 3500    |
+| weighted avg        | 81.65     | 81.80     | 81.42     | 3500    |
 
 ## Discussion
 I was surprised that logistic regression, which is often seen as a baseline model, performed 

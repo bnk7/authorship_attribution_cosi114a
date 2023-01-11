@@ -15,36 +15,36 @@ Name: author, dtype: int64
 
 Accuracy on dev set with default hyperparameters:
 Logistic regression
-Bag of words: 0.7751428571428571
-Bag of bigrams: 0.7525714285714286
-Tf-idf: 0.8094285714285714
-Bag of bigrams + McGill word list: 0.7542857142857143
-Tf-idf + McGill word list: 0.8048571428571428
+bag of words: 0.7751428571428571
+bag of bigrams: 0.7525714285714286
+tf-idf: 0.8094285714285714
+word list and bag of bigrams: 0.7542857142857143
+word list and tf-idf: 0.8048571428571428
 Random forest
-Bag of words: 0.7265714285714285
-Bag of bigrams: 0.5808571428571428
-Tf-idf: 0.7391428571428571
-Bag of bigrams + McGill word list: 0.6062857142857143
-Tf-idf + McGill word list: 0.7297142857142858
+bag of words: 0.7211428571428572
+bag of bigrams: 0.5811428571428572
+tf-idf: 0.7322857142857143
+word list and bag of bigrams: 0.6085714285714285
+word list and tf-idf: 0.7302857142857143
 
 Accuracy on dev set, tuning hyperparameters:
 Logistic regression
-Bag of words, C=0.5: 0.7708571428571429
-Bag of words, C=2.0: 0.7777142857142857
-Tf-idf, C=0.5: 0.8034285714285714
-Tf-idf, C=2.0: 0.8125714285714286
-Tf-idf + McGill word list, C=0.5: 0.8
-Tf-idf + McGill word list, C=2.0: 0.8031428571428572
+bag of words, C=0.5: 0.7708571428571429
+tf-idf, C=0.5: 0.8034285714285714
+word list and tf-idf, C=0.5: 0.8
+bag of words, C=2.0: 0.778
+tf-idf, C=2.0: 0.8125714285714286
+word list and tf-idf, C=2.0: 0.8031428571428572
 Random forest
-Tf-idf, n_estimators=50, max_features=sqrt: 0.7271428571428571
-Tf-idf, n_estimators=200, max_features=sqrt: 0.738
-Tf-idf, n_estimators=50, max_features=1.0: 0.6754285714285714
-Tf-idf, n_estimators=100, max_features=1.0: 0.6697142857142857
+tf-idf, n_estimators=50, max_features=sqrt: 0.7248571428571429
+tf-idf, n_estimators=50, max_features=1.0: 0.6757142857142857
+tf-idf, n_estimators=200, max_features=sqrt: 0.7357142857142858
+tf-idf, n_estimators=100, max_features=1.0: 0.6697142857142857
 
 Accuracy on test set, logistic regression only:
-Tf-idf, C=1.0: 0.8148571428571428
-Tf-idf, C=2.0: 0.818
-Tf-idf + McGill word list, C=1.0: 0.8097142857142857
+tf-idf, C=1.0: 0.8148571428571428
+tf-idf, C=2.0: 0.818
+word list and tf-idf, C=1.0: 0.8097142857142857
 
 Classification report for logistic regression, tf-idf, C=2.0:
                      precision    recall  f1-score   support
